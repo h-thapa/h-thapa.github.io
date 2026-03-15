@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "title": "Deep Learning Portfolio Risk Engine",
+      "description": "End-to-end system that uses LSTM networks and Monte Carlo simulation to estimate VaR and CVaR across multi-asset portfolios in real-time, with an interactive Streamlit dashboard for scenario analysis.",
+      "iconClass": "fa-solid fa-chart-line",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["Python", "LSTM", "Monte Carlo", "Streamlit", "PyPortfolioOpt"],
+      "delay": 0
+    },
+    {
+      "title": "Macro-Economic Time Series Forecaster",
+      "description": "Hybrid forecasting framework combining ARIMA, Facebook Prophet, and Transformer-based models to forecast CPI, GDP growth, and yield curves with automatic model selection and uncertainty quantification.",
+      "iconClass": "fa-solid fa-wave-square",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["Prophet", "Transformers", "statsmodels", "Plotly", "Python"],
+      "delay": 0.1
+    },
+    {
+      "title": "Smart Portfolio Optimiser",
+      "description": "Multi-objective optimisation engine supporting mean-variance, risk parity, Black-Litterman, and hierarchical risk parity (HRP) strategies - with constraint handling for real-world mandates and live rebalancing triggers.",
+      "iconClass": "fa-solid fa-bolt",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["cvxpy", "SciPy", "HRP", "Black-Litterman", "Python"],
+      "delay": 0.1
+    },
+    {
+      "title": "NLP Earnings Sentiment Signal",
+      "description": "NLP pipeline that extracts sentiment and topic signals from 10-K filings and earnings call transcripts using FinBERT and LDA topic models, integrated as alpha factors into a cross-sectional equity return model.",
+      "iconClass": "fa-solid fa-brain",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["FinBERT", "LDA", "NLP", "XGBoost", "SEC EDGAR"],
+      "delay": 0.2
+    },
+    {
+      "title": "Systematic Backtesting Framework",
+      "description": "Event-driven backtesting platform supporting equities and crypto, with transaction cost modelling, realistic slippage simulation, performance attribution, and Sharpe/Sortino/Calmar benchmarking reports.",
+      "iconClass": "fa-solid fa-chart-column",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["Python", "Event-Driven", "Backtesting", "Pandas", "Zipline"],
+      "delay": 0
+    },
+    {
+      "title": "Alternative Data Analytics Pipeline",
+      "description": "Automated ingestion and feature-engineering pipeline for alternative datasets (satellite imagery signals, social sentiment, web-scraped pricing data), feeding downstream ML models for systematic alpha generation.",
+      "iconClass": "fa-solid fa-database",
+      "links": [
+        {
+          "url": "https://github.com/h-thapa",
+          "title": "GitHub",
+          "iconClass": "fa-brands fa-github"
+        }
+      ],
+      "tags": ["PySpark", "Airflow", "AWS S3", "dbt", "Python"],
+      "delay": 0.1
+    }
+  ]
+}

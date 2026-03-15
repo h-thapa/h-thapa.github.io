@@ -136,6 +136,242 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+// ----- Professional Journey (JSON Data) -----
+const professionalJourneyTimeline = document.getElementById('professionalJourneyTimeline');
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderJourneyItem(item, index) {
+  const delay = typeof item.delay === 'number' ? item.delay : index * 0.1;
+  const delayStyle = delay > 0 ? ` style="transition-delay:${delay}s"` : '';
+  const badgeClass = item.badgeType === 'green' ? 'badge-green' : 'badge-blue';
+  const badgeMarkup = item.badgeText
+    ? `<span class="badge ${badgeClass}">${escapeHtml(item.badgeText)}</span>`
+    : '';
+  const descriptionMarkup = item.description
+    ? `<p class="tl-desc">${escapeHtml(item.description)}</p>`
+    : '';
+  const bullets = Array.isArray(item.bullets) ? item.bullets : [];
+  const bulletMarkup = bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('');
+
+  return `
+    <div class="tl-item reveal"${delayStyle}>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-company">${escapeHtml(item.company || '')}</div>
+        <div class="tl-header">
+          <div class="tl-title">${escapeHtml(item.title || '')}</div>
+          <span class="tl-period">${escapeHtml(item.period || '')}</span>
+        </div>
+        ${badgeMarkup}
+        ${descriptionMarkup}
+        <ul class="tl-bullets">${bulletMarkup}</ul>
+      </div>
+    </div>
+  `;
+}
+
+async function loadProfessionalJourney() {
+  if (!professionalJourneyTimeline) return;
+
+  try {
+    const response = await fetch('data/professional-journey.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const entries = Array.isArray(payload) ? payload : payload.entries;
+    if (!Array.isArray(entries) || entries.length === 0) return;
+
+    professionalJourneyTimeline.innerHTML = entries
+      .map((entry, index) => renderJourneyItem(entry, index))
+      .join('');
+
+    professionalJourneyTimeline
+      .querySelectorAll('.reveal')
+      .forEach((el) => observer.observe(el));
+  } catch (error) {
+    console.error('Unable to load professional journey data.', error);
+  }
+}
+
+loadProfessionalJourney();
+
+// ----- Featured Projects (JSON Data) -----
+const featuredProjectsGrid = document.getElementById('featuredProjectsGrid');
+
+function renderProjectLink(link) {
+  const url = escapeHtml(link.url || '#');
+  const title = escapeHtml(link.title || 'Project Link');
+  const iconClass = escapeHtml(link.iconClass || 'fa-solid fa-link');
+  return `<a href="${url}" class="proj-link" title="${title}" target="_blank" rel="noopener"><i class="${iconClass}"></i></a>`;
+}
+
+function renderProjectCard(project, index) {
+  const delay = typeof project.delay === 'number' ? project.delay : (index % 3) * 0.1;
+  const delayStyle = delay > 0 ? ` style="transition-delay:${delay}s"` : '';
+  const iconClass = escapeHtml(project.iconClass || 'fa-solid fa-diagram-project');
+  const links = Array.isArray(project.links) ? project.links : [];
+  const tags = Array.isArray(project.tags) ? project.tags : [];
+
+  const linksMarkup = links.map((link) => renderProjectLink(link)).join('');
+  const tagsMarkup = tags.map((tag) => `<span class="proj-tag">${escapeHtml(tag)}</span>`).join('');
+
+  return `
+    <div class="proj-card reveal"${delayStyle}>
+      <div class="proj-header">
+        <span class="proj-icon"><i class="${iconClass}"></i></span>
+        <div class="proj-links">${linksMarkup}</div>
+      </div>
+      <h3>${escapeHtml(project.title || '')}</h3>
+      <p>${escapeHtml(project.description || '')}</p>
+      <div class="proj-tags">${tagsMarkup}</div>
+    </div>
+  `;
+}
+
+async function loadFeaturedProjects() {
+  if (!featuredProjectsGrid) return;
+
+  try {
+    const response = await fetch('data/projects.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const entries = Array.isArray(payload) ? payload : payload.entries;
+    if (!Array.isArray(entries) || entries.length === 0) return;
+
+    featuredProjectsGrid.innerHTML = entries
+      .map((entry, index) => renderProjectCard(entry, index))
+      .join('');
+
+    featuredProjectsGrid
+      .querySelectorAll('.reveal')
+      .forEach((el) => observer.observe(el));
+  } catch (error) {
+    console.error('Unable to load projects data.', error);
+  }
+}
+
+loadFeaturedProjects();
+
+// ----- Education (JSON Data) -----
+const educationGrid = document.getElementById('educationGrid');
+
+function renderEducationCard(item, index) {
+  const delay = typeof item.delay === 'number' ? item.delay : index * 0.1;
+  const delayStyle = delay > 0 ? ` style="transition-delay:${delay}s"` : '';
+  const iconClass = escapeHtml(item.iconClass || 'fa-solid fa-graduation-cap');
+
+  return `
+    <div class="edu-card reveal"${delayStyle}>
+      <div class="edu-icon"><i class="${iconClass}"></i></div>
+      <div class="edu-deg">${escapeHtml(item.degree || '')}</div>
+      <h3>${escapeHtml(item.title || '')}</h3>
+      <div class="edu-school">${escapeHtml(item.school || '')}</div>
+      <div class="edu-period">${escapeHtml(item.period || '')}</div>
+      <p class="edu-note">${escapeHtml(item.note || '')}</p>
+    </div>
+  `;
+}
+
+async function loadEducation() {
+  if (!educationGrid) return;
+
+  try {
+    const response = await fetch('data/education.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const entries = Array.isArray(payload) ? payload : payload.entries;
+    if (!Array.isArray(entries) || entries.length === 0) return;
+
+    educationGrid.innerHTML = entries
+      .map((entry, index) => renderEducationCard(entry, index))
+      .join('');
+
+    educationGrid
+      .querySelectorAll('.reveal')
+      .forEach((el) => observer.observe(el));
+  } catch (error) {
+    console.error('Unable to load education data.', error);
+  }
+}
+
+loadEducation();
+
+// ----- Publications & Certifications (JSON Data) -----
+const publicationsGrid = document.getElementById('publicationsGrid');
+const certificationsGrid = document.getElementById('certificationsGrid');
+
+function renderCredentialCard(item, index) {
+  const delay = typeof item.delay === 'number' ? item.delay : index * 0.05;
+  const delayStyle = delay > 0 ? ` style="transition-delay:${delay}s"` : '';
+  const issuer = escapeHtml(item.issuer || '');
+  const title = escapeHtml(item.title || '');
+  const date = escapeHtml(item.date || '');
+  const linkLabel = escapeHtml(item.linkLabel || 'View');
+  const linkUrl = item.url ? escapeHtml(item.url) : '';
+  const linkMarkup = linkUrl
+    ? `<a href="${linkUrl}" class="cert-link" target="_blank" rel="noopener">${linkLabel} <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`
+    : '';
+
+  return `
+    <div class="cert-card reveal"${delayStyle}>
+      <div class="cert-issuer">${issuer}</div>
+      <h3>${title}</h3>
+      <div class="cert-date">${date}</div>
+      ${linkMarkup}
+    </div>
+  `;
+}
+
+function renderCredentialGroup(container, entries) {
+  if (!container || !Array.isArray(entries) || entries.length === 0) return;
+
+  container.innerHTML = entries
+    .map((entry, index) => renderCredentialCard(entry, index))
+    .join('');
+
+  container
+    .querySelectorAll('.reveal')
+    .forEach((el) => observer.observe(el));
+}
+
+async function loadPublicationsAndCertifications() {
+  if (!publicationsGrid && !certificationsGrid) return;
+
+  try {
+    const response = await fetch('data/publications-certifications.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const publications = Array.isArray(payload.publications) ? payload.publications : [];
+    const certifications = Array.isArray(payload.certifications) ? payload.certifications : [];
+
+    renderCredentialGroup(publicationsGrid, publications);
+    renderCredentialGroup(certificationsGrid, certifications);
+  } catch (error) {
+    console.error('Unable to load publications and certifications data.', error);
+  }
+}
+
+loadPublicationsAndCertifications();
+
 // ----- Active Nav Link -----
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');

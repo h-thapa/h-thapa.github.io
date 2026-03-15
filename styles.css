@@ -356,6 +356,13 @@
 
     /* ===== CERTIFICATIONS ===== */
     #certifications { background: var(--bg-soft); }
+    .cred-group { margin-bottom: 34px; }
+    .cred-group:last-child { margin-bottom: 0; }
+    .cred-group-title {
+      font-size: 0.82rem; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.11em;
+      margin-bottom: 14px;
+    }
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .cert-card {
       background: var(--bg-card); border: 1px solid var(--border);
@@ -366,6 +373,12 @@
     .cert-issuer { font-size: 0.75rem; color: var(--accent2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
     .cert-card h3 { font-size: 0.9rem; margin-bottom: 6px; }
     .cert-date { font-size: 0.78rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
+    .cert-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 12px; font-size: 0.8rem; font-weight: 600;
+      color: var(--accent); transition: opacity var(--transition);
+    }
+    .cert-link:hover { opacity: 0.75; }
 
     /* ===== CONTACT ===== */
     #contact { }

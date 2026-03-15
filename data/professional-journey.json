@@ -1,0 +1,42 @@
+{
+  "entries": [
+    {
+      "company": "NorthernInvest Technologies",
+      "title": "Founder / Principal Consultant",
+      "period": "2023 - Present",
+      "badgeText": "Current Role",
+      "badgeType": "green",
+      "bullets": [
+        "Architected and deployed end-to-end ML forecasting pipelines for equity and fixed-income asset classes, reducing portfolio drawdown by improving signal quality.",
+        "Led development of a real-time portfolio optimization engine using mean-CVaR framework, enabling dynamic rebalancing strategies across multi-asset portfolios.",
+        "Developed NLP-based sentiment analysis models from earnings call transcripts and news feeds to enrich fundamental factors.",
+        "Designed automated performance attribution dashboards presented to CIO-level stakeholders."
+      ]
+    },
+    {
+      "company": "Financial Technology / Analytics Consultancy",
+      "title": "Quantitative Data Scientist",
+      "period": "2021 - 2023",
+      "badgeText": "Full-Time",
+      "badgeType": "blue",
+      "bullets": [
+        "Built time series forecasting models (LSTM, Transformer, SARIMA) for macro-economic indicators and commodity price prediction with sub-5% MAPE on out-of-sample data.",
+        "Delivered risk factor decomposition using PCA and factor regression, enabling cleaner attribution of returns for a $2B AUM client.",
+        "Automated data ingestion and feature engineering pipelines using Airflow and Spark, cutting refresh latency from hours to minutes.",
+        "Implemented backtesting frameworks for systematic trading strategies using event-driven simulation."
+      ]
+    },
+    {
+      "company": "Investment Bank / Research Division",
+      "title": "Quantitative Analyst - Research & Strategy",
+      "period": "2019 - 2021",
+      "badgeText": "Full-Time",
+      "badgeType": "blue",
+      "bullets": [
+        "Developed statistical arbitrage strategies by identifying co-integrated asset pairs across equity markets using Engle-Granger and Johansen tests.",
+        "Built scenario-analysis models for stress testing portfolios under historical and Monte Carlo-simulated tail events.",
+        "Created advanced analytics reports on market microstructure dynamics, volatility surfaces, and options pricing using Black-Scholes and Heston models."
+      ]
+    }
+  ]
+}

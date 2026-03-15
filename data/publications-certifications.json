@@ -1,0 +1,66 @@
+{
+  "publications": [
+    {
+      "issuer": "Book Publication",
+      "title": "Your Book Title Here",
+      "date": "Book · Add publication year",
+      "url": "https://example.com",
+      "linkLabel": "View Book",
+      "delay": 0
+    },
+    {
+      "issuer": "Research Paper",
+      "title": "Your Research Paper Title Here",
+      "date": "Journal / Conference · Add year",
+      "url": "https://example.com",
+      "linkLabel": "View Paper",
+      "delay": 0.05
+    },
+    {
+      "issuer": "Industry Whitepaper",
+      "title": "Your Whitepaper or Publication Title",
+      "date": "Publication · Add details",
+      "url": "https://example.com",
+      "linkLabel": "View Publication",
+      "delay": 0.1
+    }
+  ],
+  "certifications": [
+    {
+      "issuer": "CFA Institute",
+      "title": "CFA Program (Levels I-III)",
+      "date": "Quantitative Methods · Fixed Income · Portfolio Management",
+      "delay": 0
+    },
+    {
+      "issuer": "Coursera / DeepLearning.AI",
+      "title": "Deep Learning Specialization",
+      "date": "Neural Networks · CNNs · RNNs · Optimization",
+      "delay": 0.05
+    },
+    {
+      "issuer": "Coursera / AWS",
+      "title": "Machine Learning in Production",
+      "date": "MLOps · Model Deployment · Monitoring",
+      "delay": 0.1
+    },
+    {
+      "issuer": "Quantopian / QuantInsti",
+      "title": "Algorithmic Trading & Quantitative Finance",
+      "date": "Backtesting · Factor Models · Execution",
+      "delay": 0.15
+    },
+    {
+      "issuer": "Google / Coursera",
+      "title": "Advanced Data Analytics Certificate",
+      "date": "Regression · Forecasting · A/B Testing",
+      "delay": 0.2
+    },
+    {
+      "issuer": "Databricks / Apache",
+      "title": "Apache Spark for Data Engineering",
+      "date": "PySpark · Delta Lake · Real-Time Streaming",
+      "delay": 0.25
+    }
+  ]
+}
