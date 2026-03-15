@@ -81,7 +81,8 @@
         <div class="hero-avatar">
           <div class="hero-avatar-ring"></div>
           <div class="hero-avatar-inner">
-            <div class="avatar-initials">HT</div>
+            <img id="profileImage" src="images/profile.jpg" alt="Profile photo of Heath Thapa" />
+            <div class="avatar-initials" id="avatarInitials">HT</div>
           </div>
         </div>
       </div>
@@ -589,6 +590,33 @@
       applyTheme(nextTheme);
       localStorage.setItem('theme', nextTheme);
     });
+
+    // ----- Avatar Image Fallback -----
+    const profileImage = document.getElementById('profileImage');
+    const avatarInitials = document.getElementById('avatarInitials');
+
+    function showAvatarImage() {
+      profileImage.style.display = 'block';
+      avatarInitials.style.display = 'none';
+    }
+
+    function showAvatarFallback() {
+      profileImage.style.display = 'none';
+      avatarInitials.style.display = 'flex';
+    }
+
+    if (profileImage && avatarInitials) {
+      if (profileImage.complete) {
+        if (profileImage.naturalWidth > 0) {
+          showAvatarImage();
+        } else {
+          showAvatarFallback();
+        }
+      } else {
+        profileImage.addEventListener('load', showAvatarImage);
+        profileImage.addEventListener('error', showAvatarFallback);
+      }
+    }
 
     // ----- Mobile Nav -----
     function toggleNav() {
