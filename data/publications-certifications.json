@@ -1,65 +1,85 @@
 {
   "publications": [
     {
-      "issuer": "Book Publication",
-      "title": "Your Book Title Here",
-      "date": "Book · Add publication year",
-      "url": "https://example.com",
-      "linkLabel": "View Book",
+      "issuer": "Amazon Kindle",
+      "title": "AI & ML Applications in Financial Advisory and Asset Management: Investment Research, Alpha Generation and Portfolio Optimization",
+      "date": "Book · Published December 25, 2025",
+      "url": "https://www.amazon.com/Applications-Financial-Advisory-Asset-Management-ebook/dp/B0GCMJPJKN",
+      "linkLabel": "View on Amazon",
       "delay": 0
     },
     {
-      "issuer": "Research Paper",
-      "title": "Your Research Paper Title Here",
-      "date": "Journal / Conference · Add year",
-      "url": "https://example.com",
-      "linkLabel": "View Paper",
+      "issuer": "Amazon Kindle",
+      "title": "Digital Renaissance: Reimagining Media, Marketing, and the Modern Consumer",
+      "date": "Book · Published November 10, 2025",
+      "url": "https://www.amazon.com/Digital-Renaissance-Reimagining-Marketing-Consumer-ebook/dp/B0G1LNJT79",
+      "linkLabel": "View on Amazon",
       "delay": 0.05
     },
     {
-      "issuer": "Industry Whitepaper",
-      "title": "Your Whitepaper or Publication Title",
-      "date": "Publication · Add details",
-      "url": "https://example.com",
-      "linkLabel": "View Publication",
+      "issuer": "Amazon Kindle",
+      "title": "30 Days Challenge - Mastering SQL Begineers Guide to learning Fundatmental Concepts",
+      "date": "Book · Published October 30, 2024",
+      "url": "https://www.amazon.com/Days-Challenge-Mastering-Begineers-Fundatmental-ebook/dp/B0DLHT2QGL",
+      "linkLabel": "View on Amazon",
       "delay": 0.1
+    },
+    {
+      "issuer": "Amazon Kindle",
+      "title": "Machine Learning Beginner's Guide to learning all the fundamental Concepts: 30 days Challenge",
+      "date": "Book · Published October 24, 2024",
+      "url": "https://www.amazon.com/Learning-Beginners-learning-fundamental-Concepts-ebook/dp/B0DKTTRHXV",
+      "linkLabel": "View on Amazon",
+      "delay": 0.15
     }
   ],
   "certifications": [
     {
-      "issuer": "CFA Institute",
-      "title": "CFA Program (Levels I-III)",
-      "date": "Quantitative Methods · Fixed Income · Portfolio Management",
+      "issuer": "LinkedIn Learning Community",
+      "title": "Amazon Web Services Big Data Specialty",
+      "date": "Issued Jan 2021 · Skills: Amazon Web Services (AWS) · Cloud Computing",
+      "url": "files/certifications/amazon-web-services-big-data-specialty.pdf",
+      "linkLabel": "View Certificate",
       "delay": 0
     },
     {
-      "issuer": "Coursera / DeepLearning.AI",
-      "title": "Deep Learning Specialization",
-      "date": "Neural Networks · CNNs · RNNs · Optimization",
+      "issuer": "CFA Institute",
+      "title": "CFA Level 1",
+      "date": "Issued Aug 2021",
+      "url": "files/certifications/cfa-level-1.pdf",
+      "linkLabel": "View Certificate",
       "delay": 0.05
     },
     {
-      "issuer": "Coursera / AWS",
-      "title": "Machine Learning in Production",
-      "date": "MLOps · Model Deployment · Monitoring",
+      "issuer": "SAS",
+      "title": "SAS Certified Base Programmer for SAS 9 (CBP)",
+      "date": "Issued Jun 2012 · Credential ID SSR7787402",
+      "url": "files/certifications/sas-certified-base-programmer-for-sas-9-cbp.jpg",
+      "linkLabel": "View Certificate",
       "delay": 0.1
     },
     {
-      "issuer": "Quantopian / QuantInsti",
-      "title": "Algorithmic Trading & Quantitative Finance",
-      "date": "Backtesting · Factor Models · Execution",
+      "issuer": "LinkedIn Learning",
+      "title": "Data Science Foundations: Python Scientific Stack",
+      "date": "Issued Mar 2021 · Expires Mar 2030 · Skills: Data Science",
+      "url": "files/certifications/data-science-foundations-python-scientific-stack.pdf",
+      "linkLabel": "View Certificate",
       "delay": 0.15
     },
     {
-      "issuer": "Google / Coursera",
-      "title": "Advanced Data Analytics Certificate",
-      "date": "Regression · Forecasting · A/B Testing",
+      "issuer": "Skillshop",
+      "title": "Google Analytics Certification",
+      "date": "Issued Oct 2024 · Expired Oct 2025 · Credential ID 118151658",
+      "url": "files/certifications/google-analytics-certification.pdf",
+      "linkLabel": "View Certificate",
       "delay": 0.2
     },
     {
-      "issuer": "Databricks / Apache",
-      "title": "Apache Spark for Data Engineering",
-      "date": "PySpark · Delta Lake · Real-Time Streaming",
+      "issuer": "Texas A&M University",
+      "title": "Applied Statistics Certificate",
+      "date": "Issued Jul 2012",
+      "url": "files/certifications/applied-statistics-certificate.pdf",
+      "linkLabel": "View Certificate",
       "delay": 0.25
     }
   ]

@@ -3,18 +3,18 @@
     {
       "iconClass": "fa-solid fa-graduation-cap",
       "degree": "Master's Degree",
-      "title": "M.S. in Financial Engineering / Data Science",
-      "school": "University - United States",
-      "period": "2017 - 2019",
+      "title": "M.S. in Industrial Engineering / Operations Research",
+      "school": "Texas A&M University - College Station",
+      "period": "2010 - 2012",
       "note": "Coursework in stochastic calculus, derivatives pricing, ML for finance, and optimization theory.",
       "delay": 0
     },
     {
       "iconClass": "fa-solid fa-book",
       "degree": "Bachelor's Degree",
-      "title": "B.S. in Mathematics / Computer Science",
-      "school": "University",
-      "period": "2013 - 2017",
+      "title": "B.S. in Engineering / Mechanical Engineering",
+      "school": "Visvesvaraya Technological University",
+      "period": "",
       "note": "Strong foundation in linear algebra, probability, statistics, algorithms, and programming.",
       "delay": 0.1
     }
