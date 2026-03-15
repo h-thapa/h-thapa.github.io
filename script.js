@@ -21,6 +21,68 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', nextTheme);
 });
 
+// ----- Hero Name Landing Animation -----
+const heroFirstName = document.getElementById('heroFirstName');
+const heroTitle = heroFirstName ? heroFirstName.closest('.hero-title') : null;
+
+function animateHeroFirstName() {
+  if (!heroFirstName) return;
+
+  const initialName = (heroFirstName.dataset.initialName || 'Himanshu').trim();
+  const finalName = (heroFirstName.dataset.finalName || 'Heath').trim();
+  if (!initialName || !finalName) return;
+
+  heroFirstName.textContent = initialName;
+  heroFirstName.style.minWidth = `${Math.max(initialName.length, finalName.length)}ch`;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroFirstName.textContent = finalName;
+    heroFirstName.style.minWidth = '';
+    if (heroTitle) heroTitle.classList.remove('name-transitioning');
+    return;
+  }
+
+  if (heroTitle) heroTitle.classList.add('name-transitioning');
+  heroFirstName.classList.add('name-cursor');
+
+  const startDelayMs = 700;
+  const deleteSpeedMs = 85;
+  const holdBetweenMs = 180;
+  const typeSpeedMs = 115;
+
+  function startTyping() {
+    let typeIndex = 0;
+    const typeTimer = window.setInterval(() => {
+      typeIndex += 1;
+      heroFirstName.textContent = finalName.slice(0, typeIndex);
+
+      if (typeIndex >= finalName.length) {
+        window.clearInterval(typeTimer);
+        heroFirstName.classList.remove('name-cursor');
+        heroFirstName.style.minWidth = '';
+        if (heroTitle) heroTitle.classList.remove('name-transitioning');
+      }
+    }, typeSpeedMs);
+  }
+
+  function startDeleting() {
+    let deleteIndex = initialName.length;
+    const deleteTimer = window.setInterval(() => {
+      deleteIndex -= 1;
+      heroFirstName.textContent = initialName.slice(0, Math.max(deleteIndex, 0));
+
+      if (deleteIndex <= 0) {
+        window.clearInterval(deleteTimer);
+        window.setTimeout(startTyping, holdBetweenMs);
+      }
+    }, deleteSpeedMs);
+  }
+
+  window.setTimeout(startDeleting, startDelayMs);
+}
+
+animateHeroFirstName();
+
 // ----- Avatar Image Fallback -----
 const profileImage = document.getElementById('profileImage');
 const avatarInitials = document.getElementById('avatarInitials');

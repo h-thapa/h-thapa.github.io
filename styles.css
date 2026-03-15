@@ -150,7 +150,30 @@
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.9)} }
 
     h1.hero-title { font-size: clamp(2.6rem, 6vw, 4.2rem); margin-bottom: 12px; }
-    h1.hero-title span { color: var(--accent); }
+    .hero-title .hero-last-name {
+      color: var(--accent);
+      display: inline-block;
+    }
+    .hero-title.name-transitioning .hero-last-name {
+      animation: surname-float 0.95s ease-in-out infinite;
+    }
+    @keyframes surname-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .hero-title .hero-first-name {
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+    .hero-title .hero-first-name.name-cursor {
+      border-right: 2px solid var(--accent2);
+      padding-right: 3px;
+      animation: blink-caret 0.75s steps(1) infinite;
+    }
+    @keyframes blink-caret {
+      0%, 48% { border-right-color: var(--accent2); }
+      49%, 100% { border-right-color: transparent; }
+    }
     .hero-sub {
       font-size: clamp(1.05rem, 2.5vw, 1.3rem); color: var(--text-muted);
       font-weight: 400; margin-bottom: 28px; max-width: 560px;
