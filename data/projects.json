@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "title": "MarketNews Sentiment Dashboard",
+      "description": "Interactive Streamlit dashboard that aggregates and scores market news sentiment across multiple feeds, highlighting topical momentum and major themes such as corporate earnings, market structure, tech and semiconductors, geopolitics, energy and commodities, trade and fiscal policy, inflation and growth data, rates and bonds, and central banks.",
+      "iconClass": "fa-solid fa-newspaper",
+      "links": [
+        {
+          "url": "https://marketnews-sentiment-dashboard.streamlit.app/",
+          "title": "Live App",
+          "iconClass": "fa-solid fa-arrow-up-right-from-square"
+        }
+      ],
+      "tags": ["Streamlit", "Market News", "Sentiment Analysis", "NLP", "Macro Themes", "Python"],
+      "delay": 0.2
+    },
+    {
       "title": "Deep Learning Portfolio Risk Engine",
       "description": "End-to-end system that uses LSTM networks and Monte Carlo simulation to estimate VaR and CVaR across multi-asset portfolios in real-time, with an interactive Streamlit dashboard for scenario analysis.",
       "iconClass": "fa-solid fa-chart-line",
@@ -13,6 +27,20 @@
       ],
       "tags": ["Python", "LSTM", "Monte Carlo", "Streamlit", "PyPortfolioOpt"],
       "delay": 0
+    },
+    {
+      "title": "SPX Volatility & Return Analysis",
+      "description": "Interactive Streamlit dashboard for SPX historical overlays, intraday dynamics, risk-and-reward regimes, and the relationship between SPX and VIX, including intraday trading context and volatility-aware market behavior.",
+      "iconClass": "fa-solid fa-chart-area",
+      "links": [
+        {
+          "url": "https://spx-daily-returns-tracker.streamlit.app/",
+          "title": "Live App",
+          "iconClass": "fa-solid fa-arrow-up-right-from-square"
+        }
+      ],
+      "tags": ["Streamlit", "SPX", "VIX", "Volatility", "Risk Regimes", "Python"],
+      "delay": 0.2
     },
     {
       "title": "Macro-Economic Time Series Forecaster",

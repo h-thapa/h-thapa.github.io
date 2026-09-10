@@ -1,0 +1,34 @@
+{
+  "coreProficiencies": [
+    { "name": "Python (NumPy · Pandas · Scikit-learn)", "value": 95 },
+    { "name": "Machine Learning & Deep Learning", "value": 90 },
+    { "name": "Time Series Analysis", "value": 92 },
+    { "name": "Quantitative Modelling & Statistics", "value": 88 },
+    { "name": "SQL & Data Engineering", "value": 85 },
+    { "name": "Portfolio Optimization", "value": 87 }
+  ],
+  "frameworksAndLibraries": [
+    "TensorFlow",
+    "PyTorch",
+    "Keras",
+    "XGBoost",
+    "LightGBM",
+    "Prophet",
+    "statsmodels",
+    "PyPortfolioOpt",
+    "QuantLib",
+    "cvxpy",
+    "SciPy",
+    "Plotly",
+    "Dash",
+    "Streamlit",
+    "Spark",
+    "dbt",
+    "Airflow",
+    "Docker",
+    "Git",
+    "Bloomberg API",
+    "Power BI",
+    "Tableau"
+  ]
+}

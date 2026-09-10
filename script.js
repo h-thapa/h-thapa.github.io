@@ -198,6 +198,59 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+// ----- Skills (JSON Data) -----
+const coreSkillsGroup = document.getElementById('coreSkillsGroup');
+const frameworksGroup = document.getElementById('frameworksGroup');
+
+function renderSkillBar(skill, index) {
+  const delay = typeof skill.delay === 'number' ? skill.delay : index * 0.08;
+  const delayStyle = delay > 0 ? ` style="transition-delay:${delay}s"` : '';
+  const value = Number(skill.value || 0);
+
+  return `
+    <div class="skill-item reveal"${delayStyle}>
+      <div class="skill-header"><span class="skill-name">${escapeHtml(skill.name || '')}</span><span class="skill-pct">${value}%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:${value}%"></div></div>
+    </div>
+  `;
+}
+
+function renderFrameworkTags(tags) {
+  return tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+}
+
+async function loadSkills() {
+  if (!coreSkillsGroup || !frameworksGroup) return;
+
+  try {
+    const response = await fetch('data/skills.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    const coreSkills = Array.isArray(data.coreProficiencies) ? data.coreProficiencies : [];
+    const frameworks = Array.isArray(data.frameworksAndLibraries) ? data.frameworksAndLibraries : [];
+
+    coreSkillsGroup.innerHTML = `
+      <h3>Core Proficiencies</h3>
+      ${coreSkills.map((skill, index) => renderSkillBar(skill, index)).join('')}
+    `;
+
+    frameworksGroup.innerHTML = `
+      <h3>Frameworks &amp; Libraries</h3>
+      <div class="tags-cloud">${renderFrameworkTags(frameworks)}</div>
+    `;
+
+    coreSkillsGroup.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    frameworksGroup.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  } catch (error) {
+    console.error('Unable to load skills data.', error);
+  }
+}
+
+loadSkills();
+
 // ----- Professional Journey (JSON Data) -----
 const professionalJourneyTimeline = document.getElementById('professionalJourneyTimeline');
 
