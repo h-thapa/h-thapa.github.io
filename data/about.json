@@ -1,0 +1,42 @@
+{
+  "title": "Turning Data Into Decisions That Matter",
+  "paragraphs": [
+    "I'm a data-driven professional specialising in the intersection of Artificial Intelligence, Machine Learning and the world of finance. My work spans quantitative research, algorithmic trading strategies, and intelligent analytics pipelines that empower investors and institutions to make confident, data-backed decisions.",
+    "With a deep foundation in statistical modelling, time series analysis and mathematical optimisation, I build robust systems that process large-scale financial datasets, detect patterns, and surface actionable signals — from equity markets to alternative assets.",
+    "I am passionate about translating complex quantitative methods into practical tools, dashboards, and automated workflows that deliver measurable business value across asset management and wealth advisory firms."
+  ],
+  "info": [
+    {
+      "iconClass": "fa-solid fa-location-dot",
+      "label": "Location",
+      "value": "United States",
+      "type": "text"
+    },
+    {
+      "iconClass": "fa-solid fa-briefcase",
+      "label": "Domain",
+      "value": "AI/ML · QuantFinance · Analytics",
+      "type": "text"
+    },
+    {
+      "iconClass": "fa-brands fa-linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/heaththapa",
+      "url": "https://www.linkedin.com/in/heaththapa/",
+      "type": "link"
+    },
+    {
+      "iconClass": "fa-brands fa-github",
+      "label": "GitHub",
+      "value": "github.com/singularity-htmagarh",
+      "url": "https://github.com/singularity-htmagarh",
+      "type": "link"
+    },
+    {
+      "iconClass": "fa-solid fa-code",
+      "label": "Languages",
+      "value": "Python · R · SQL · Julia",
+      "type": "text"
+    }
+  ]
+}

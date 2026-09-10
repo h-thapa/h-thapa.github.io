@@ -327,6 +327,73 @@ async function loadFeaturedProjects() {
 
 loadFeaturedProjects();
 
+// ----- About (JSON Data) -----
+const aboutTextBlock = document.getElementById('aboutTextBlock');
+const aboutInfoList = document.getElementById('aboutInfoList');
+
+function renderAboutItem(item) {
+  const iconClass = escapeHtml(item.iconClass || 'fa-solid fa-circle-info');
+  const label = escapeHtml(item.label || '');
+  const value = escapeHtml(item.value || '');
+  const url = item.url ? escapeHtml(item.url) : '';
+
+  if (item.type === 'link' && url) {
+    return `
+      <li>
+        <i class="${iconClass}"></i>
+        <span><a href="${url}" target="_blank" rel="noopener">${value}</a></span>
+      </li>
+    `;
+  }
+
+  if (item.type === 'text') {
+    return `
+      <li>
+        <i class="${iconClass}"></i>
+        <span>${label}: <strong>${value}</strong></span>
+      </li>
+    `;
+  }
+
+  return `
+    <li>
+      <i class="${iconClass}"></i>
+      <span>${label}: <strong>${value}</strong></span>
+    </li>
+  `;
+}
+
+async function loadAbout() {
+  if (!aboutTextBlock || !aboutInfoList) return;
+
+  try {
+    const response = await fetch('data/about.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    const title = escapeHtml(data.title || '');
+    const paragraphs = Array.isArray(data.paragraphs) ? data.paragraphs : [];
+    const info = Array.isArray(data.info) ? data.info : [];
+
+    aboutTextBlock.innerHTML = `
+      <div class="section-tag">// about me</div>
+      <h2 class="section-title">${title.replace(/\n/g, '<br/>')}</h2>
+      ${paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+    `;
+
+    aboutInfoList.innerHTML = info.map(renderAboutItem).join('');
+
+    aboutTextBlock.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    aboutInfoList.querySelectorAll('li').forEach((el) => observer.observe(el));
+  } catch (error) {
+    console.error('Unable to load about data.', error);
+  }
+}
+
+loadAbout();
+
 // ----- Education (JSON Data) -----
 const educationGrid = document.getElementById('educationGrid');
 
