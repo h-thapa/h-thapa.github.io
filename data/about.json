@@ -9,7 +9,7 @@
     {
       "iconClass": "fa-solid fa-location-dot",
       "label": "Location",
-      "value": "United States",
+      "value": "Toronto, Canada",
       "type": "text"
     },
     {
@@ -35,7 +35,7 @@
     {
       "iconClass": "fa-solid fa-code",
       "label": "Languages",
-      "value": "Python · R · SQL · Julia",
+      "value": "Python · R · SQL · JavaScript · C++",
       "type": "text"
     }
   ]
