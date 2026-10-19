@@ -1,13 +1,28 @@
 {
   "coreProficiencies": [
     { "name": "Python (NumPy · Pandas · Scikit-learn)", "value": 95 },
-    { "name": "Machine Learning & Deep Learning", "value": 90 },
-    { "name": "Time Series Analysis", "value": 92 },
-    { "name": "Quantitative Modelling & Statistics", "value": 88 },
-    { "name": "SQL & Data Engineering", "value": 85 },
-    { "name": "Portfolio Optimization", "value": 87 }
+    { "name": "Generative AI & LLM Applications", "value": 90 },
+    { "name": "RAG & Financial Document Intelligence", "value": 90 },
+    { "name": "Agentic AI & Multi-Agent Systems", "value": 88 },
+    { "name": "Machine Learning, Deep Learning & NLP", "value": 90 },
+    { "name": "Cloud AI Deployment & MLOps", "value": 85 },
+    { "name": "Quantitative Modelling & Time Series", "value": 88 },
+    { "name": "SQL & Data Engineering", "value": 85 }
   ],
   "frameworksAndLibraries": [
+    "LangChain",
+    "LangGraph",
+    "LlamaIndex",
+    "OpenAI API",
+    "Hugging Face Transformers",
+    "Vector Databases (FAISS · Pinecone · Chroma)",
+    "Prompt Engineering",
+    "LLM Evaluation",
+    "MLflow",
+    "FastAPI",
+    "AWS",
+    "Azure",
+    "CI/CD",
     "TensorFlow",
     "PyTorch",
     "Keras",

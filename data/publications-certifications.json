@@ -10,14 +10,6 @@
     },
     {
       "issuer": "Amazon Kindle",
-      "title": "Digital Renaissance: Reimagining Media, Marketing, and the Modern Consumer",
-      "date": "Book · Published November 10, 2025",
-      "url": "https://www.amazon.com/Digital-Renaissance-Reimagining-Marketing-Consumer-ebook/dp/B0G1LNJT79",
-      "linkLabel": "View on Amazon",
-      "delay": 0.05
-    },
-    {
-      "issuer": "Amazon Kindle",
       "title": "30 Days Challenge - Mastering SQL Begineers Guide to learning Fundatmental Concepts",
       "date": "Book · Published October 30, 2024",
       "url": "https://www.amazon.com/Days-Challenge-Mastering-Begineers-Fundatmental-ebook/dp/B0DLHT2QGL",
@@ -43,14 +35,6 @@
       "delay": 0
     },
     {
-      "issuer": "CFA Institute",
-      "title": "CFA Level 1",
-      "date": "Issued Aug 2021",
-      "url": "files/certifications/cfa-level-1.pdf",
-      "linkLabel": "View Certificate",
-      "delay": 0.05
-    },
-    {
       "issuer": "SAS",
       "title": "SAS Certified Base Programmer for SAS 9 (CBP)",
       "date": "Issued Jun 2012 · Credential ID SSR7787402",
@@ -65,14 +49,6 @@
       "url": "files/certifications/data-science-foundations-python-scientific-stack.pdf",
       "linkLabel": "View Certificate",
       "delay": 0.15
-    },
-    {
-      "issuer": "Skillshop",
-      "title": "Google Analytics Certification",
-      "date": "Issued Oct 2024 · Expired Oct 2025 · Credential ID 118151658",
-      "url": "files/certifications/google-analytics-certification.pdf",
-      "linkLabel": "View Certificate",
-      "delay": 0.2
     },
     {
       "issuer": "Texas A&M University",

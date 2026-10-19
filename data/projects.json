@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "title": "Financial Document Intelligence RAG Assistant",
+      "description": "Retrieval-Augmented Generation system that ingests filings, earnings transcripts, and research reports, then answers analyst questions with grounded, cited responses using embeddings, vector search, and LLM evaluation checks.",
+      "iconClass": "fa-solid fa-file-lines",
+      "links": [],
+      "tags": ["RAG", "LLMs", "LangChain", "Vector Search", "NLP", "Python"],
+      "delay": 0
+    },
+    {
+      "title": "Multi-Agent Investment Research Automation",
+      "description": "Agentic workflow in which specialised agents gather market and fundamental data, analyse documents, and draft investment research and client reporting, with human-in-the-loop review and auditable outputs.",
+      "iconClass": "fa-solid fa-robot",
+      "links": [],
+      "tags": ["Agentic AI", "Multi-Agent", "LLMs", "Financial Data APIs", "MLOps", "Python"],
+      "delay": 0.1
+    },
+    {
       "title": "MarketNews Sentiment Dashboard",
       "description": "Interactive Streamlit dashboard that aggregates and scores market news sentiment across multiple feeds, highlighting topical momentum and major themes such as corporate earnings, market structure, tech and semiconductors, geopolitics, energy and commodities, trade and fiscal policy, inflation and growth data, rates and bonds, and central banks.",
       "iconClass": "fa-solid fa-newspaper",

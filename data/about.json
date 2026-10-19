@@ -1,9 +1,9 @@
 {
-  "title": "Turning Data Into Decisions That Matter",
+  "title": "Building Production-Grade AI for Asset & Wealth Management",
   "paragraphs": [
-    "I'm a data-driven professional specialising in the intersection of Artificial Intelligence, Machine Learning and the world of finance. My work spans quantitative research, algorithmic trading strategies, and intelligent analytics pipelines that empower investors and institutions to make confident, data-backed decisions.",
-    "With a deep foundation in statistical modelling, time series analysis and mathematical optimisation, I build robust systems that process large-scale financial datasets, detect patterns, and surface actionable signals — from equity markets to alternative assets.",
-    "I am passionate about translating complex quantitative methods into practical tools, dashboards, and automated workflows that deliver measurable business value across asset management and wealth advisory firms."
+    "AI Data Scientist with expertise in Generative AI, Agentic AI, Retrieval-Augmented Generation (RAG), machine learning, and AI applications for asset and wealth management. I build production-grade AI systems that automate investment research, financial document intelligence, and reporting workflows using LLMs, multi-agent architectures, and advanced data science techniques.",
+    "Skilled in Python, NLP, cloud-based AI deployment, and MLOps, I integrate financial data sources to deliver scalable, data-driven solutions for capital markets and wealth management — backed by a strong foundation in statistical modelling, time series analysis, and quantitative finance.",
+    "Sector focus: Financial Services, Asset/Wealth Management, Capital Markets, Investment Research, Generative AI, SaaS and Digital Products. I enjoy leading cross-functional work that turns AI prototypes into reliable, governed, measurable business value."
   ],
   "info": [
     {
@@ -15,7 +15,7 @@
     {
       "iconClass": "fa-solid fa-briefcase",
       "label": "Domain",
-      "value": "AI/ML · QuantFinance · Analytics",
+      "value": "GenAI · Agentic AI · RAG · Asset & Wealth Management",
       "type": "text"
     },
     {

@@ -2,11 +2,14 @@
   "entries": [
     {
       "company": "NorthernInvest Technologies",
-      "title": "Founder / Principal Consultant",
+      "title": "Data Scientist & Gen AI Lead",
       "period": "2024 - Present",
       "badgeText": "Current Role",
       "badgeType": "green",
       "bullets": [
+        "Led the development of a production AI research platform that consolidated 20+ institutional data sources and 500K+ financial documents into a unified RAG architecture, delivering citation-backed investment intelligence and reducing manual research efforts by 50–70%.",
+        "Designed and deployed Generative AI, RAG, and multi-agent workflows that automate investment research, financial document analysis, and client reporting for advisors and investors.",
+        "Evaluated and benchmarked GPT, Claude, Gemini, and open-source LLMs across financial question answering, document summarization, and investment research use cases, improving response accuracy by +30% through systematic prompt optimization and retrieval enhancements.",
         "Acted as a client-facing investment expert, articulating portfolio philosophy, asset allocation frameworks, and model portfolio construction methodologies to advisors and high-net-worth investors.",
         "Partnered directly with financial advisors to understand client objectives, constraints, tax sensitivities, and risk tolerances to design tailored investment solutions.",
         "Analyzed portfolios across asset classes for risk exposure, performance attribution, tax efficiency, and factor alignment.",
@@ -23,6 +26,7 @@
       "badgeType": "blue",
       "bullets": [
         "Co-founded boutique data analytics and innovation-based consulting startup that focuses on global macro-based forecasting, quantitative finance & capital markets research using applied machine learning techniques.",
+        "Applied NLP and LLM-based techniques to extract signals from financial text and integrated multiple financial data sources into scalable research pipelines.",
         "Implemented time-series techniques based on 90% success rate in back-testing & value at risk reduction (market risk) calculations for stock price volatility.",
         "Constructed optimized portfolio to maximize performance while controlling risk, draw-down and trading cost, while enhancing the scalability & flexibility of portfolio.",
         "Quant Funds for family-office, top-down approach to business valuation with sectoral overview of how the market would function using predictive models.",
